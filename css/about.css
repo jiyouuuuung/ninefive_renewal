@@ -1,0 +1,648 @@
+@charset "utf-8";
+
+@keyframes process01 {
+    0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+@keyframes process02 {
+    0% {transform: rotate(45deg);}
+	100% {transform: rotate(405deg);}
+}
+@keyframes process03 {
+    0% {transform: rotate(90deg);}
+	100% {transform: rotate(450deg);}
+}
+
+@keyframes circleRotate {
+  100% { 
+    transform: rotate(367deg);  
+  }
+}
+
+@keyframes partnerAwards_Up {
+	100% { 
+		transform: translate(0px, -990px);
+	}
+}
+
+@keyframes partnerAwards_Down {
+	100% { 
+		transform: translate(0px, 990px);
+	}
+}
+
+.about .btn_bottom {z-index: 98; position: absolute; bottom: 0; left: 50%; width: 60px; height: 60px; margin-left: -30px; border-radius: 50%; background: rgba(0, 0, 0, 0.2) url('./../images/btn_about.png') no-repeat center; background-size: 100% auto;}
+.about .btn_bottom:focus, .about .btn_bottom:hover {background-color: rgba(0, 0, 0, 0.5); background-image:url('./../images/btn_about_h.png');}
+.device .about .btn_bottom:focus, .device .about .btn_bottom:hover {background-color: rgba(0, 0, 0, 0.3); background-image:url('./../images/btn_about.png');}
+.about .btn_bottom.top {bottom: auto; top: 0; transform: rotate(180deg);}
+
+.about {opacity:0;}
+.about h2 {font-family: "ITC Avant Garde Gothic Std Demi", sans-serif; color: #fff;}
+.about h3 {font-family: "ITC Avant Garde Gothic Std Bold", sans-serif; color: #fff;}
+.about section {max-width: 1920px !important; height: 100%; max-height: 1000px; min-height: auto; margin: auto;}
+.about section > .contents {position: absolute; top: 100px; right: 50%; z-index: 1;}
+.about section > .valign > h2 {position: relative; font-size: 100px; z-index: 1;}
+.about .contents h2 {margin-bottom: 23px; font-size: 57px; line-height: 60px;}
+.about .contents p {font-family: "Helvetica Neue Md", "NanumBarunGothic", "Dotum", "돋움", sans-serif; font-size: 15px; line-height: 22px; color: #134301;}
+.KR .about .contents p {font-family: "NanumBarunGothic", "Dotum", "돋움", sans-serif; font-size: 14px; line-height: 24px; letter-spacing: -0.05em;}
+.about .wrapper {position: absolute; top: 0; left: 0;}
+
+.intro {display: block;opacity:0;position:absolute; width:100%;}
+.intro .valign {min-width: 320px; min-height: 320px;}
+.intro .contents-obj {height: 100%;}
+.intro .contents-obj img {width: auto; min-width: 320px; height: 100%; min-height: 320px; margin: 0 auto;}
+
+/*.about .we_are {display: none;}*/
+.about .we_are h2 {padding-right: 233px; text-align: right;}
+.about .we_are ul {width: 1099px;}
+.about .we_are li {width: 653px; margin-bottom: 14px;}
+.about .we_are li:last-child {margin-bottom: 0;}
+.about .we_are li .circle {position: relative; width: 278px; height: 278px;}
+.about .we_are li .circle .circle-bg {opacity: 0; position: absolute; top: 50%; left: 50%; transform: rotate(7deg); transform-origin: 50% 50%; width: 610px; height: 610px; margin-top: -305px; margin-left: -305px; z-index: 0;}
+.about .we_are li .circle .circle-inner {display: block; position: absolute; width: 100%; height: 100%; border-radius: 50%; background: #48ff00; opacity: 0.15;}
+.about .we_are li .circle .circle-inner:first-child {transform: rotate(-45deg); transform-origin: 0 0;}
+.about .we_are li .circle .circle-inner:last-child {transform: rotate(-45deg); transform-origin: 100% 100%;}
+.about .we_are li .circle .contents-title {position: relative; width: 100%; height: 278px; padding: 0 40px; border-radius: 50vh; background: #000; font-size: 32px; line-height: 32px; text-align: center; z-index: 1;}
+.about .we_are dl {position: relative; padding-left: 38px; z-index: 0;}
+.about .we_are dt {font-family: "Helvetica Neue Md", sans-serif; font-size: 20px; line-height: 24px;}
+.about .we_are dd {opacity:0; transform:translate(0px, 0px); margin-top: 21px; font-family: "Helvetica Neue Md", "NanumBarunGothic", "Dotum", "돋움", sans-serif; font-size: 15px; line-height: 20px; color: #134301;}
+.KR .about .we_are dd {font-family: "NanumBarunGothic", "Dotum", "돋움", sans-serif; font-size: 14px; line-height: 24px; letter-spacing: -0.05em;}
+
+.about .we_do {display: none;}
+.about .we_do h2 {padding-right: 93px; text-align: right;}
+.about .we_do .do_wrap {width: 1270px;}
+.about .we_do ul {position: relative;}
+.about .we_do li {position: absolute; top: 0; left: 0; width: 283px; height: 283px;}
+.about .we_do li:first-child {position: relative;}
+.about .we_do li .circle {position: relative; width: 100%; height: 100%;}
+.about .we_do li .circle-bg {position: absolute; left: 0; width: 100%; height: 100%; width: 100%; height: 100%; border-radius: 50%; background-repeat: no-repeat; background-size: 100% auto; background-position: center;}
+.about .we_do li:nth-child(2n) .circle-bg {bottom: 100%; margin-bottom: -43px;}
+.about .we_do li:nth-child(2n-1) .circle-bg {top: 100%; margin-top: -43px;}
+.about .we_do li:nth-child(1) .circle-bg {background-image: url('./../images/main/kv001.jpg');}
+.about .we_do li:nth-child(2) .circle-bg {background-image: url('./../images/main/kv002.jpg');}
+.about .we_do li:nth-child(3) .circle-bg {background-image: url('./../images/main/kv003.jpg');}
+.about .we_do li:nth-child(4) .circle-bg {background-image: url('./../images/main/kv004.jpg');}
+.about .we_do li:nth-child(5), .about .we_do li:nth-child(6) {opacity: 0.5;}
+.about .we_do li .valign {position: relative; border-radius: 50%; background: rgba(255, 255, 255, 0.8); font-family: "ITC Avant Garde Gothic Std Bold", sans-serif; font-size: 23px; letter-spacing: -0.01em; color: #134d09; text-align: center;}
+
+.about .process {display: none;}
+.about .process .contents {width: 542px; margin-right: 177px;}
+.about .process .valign {font-size: 20px; line-height: 22px; font-family: "ITC Avant Garde Gothic Std Bold", sans-serif; color: #134d09; text-align: center;}
+.about .process li {display: inline-block; margin-left: -34px;}
+.about .process .wrapper li:first-child, .about .process .wrapper > ol > li:last-child {margin-left: 0;}
+.about .process li:last-child::after {content: ''; display: block; clear: both;}
+.about .process li.white {margin-bottom: 253px;}
+.about .process li .circle {width: 269px; height: 269px; border-radius: 50%; background: rgba(255, 255, 255, 0.8);}
+.about .process li.circle-big {position: relative; width: 779px; height: 779px; margin: 0 6px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.5);}
+.about .process li.circle-big dt {position: absolute; top: 115px; width: 100%; letter-spacing: -0.01em; color: #fff;}
+.about .process li.circle-big .circle {position: relative; background: none;}
+.about .process li.circle-big .circle-bg {display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: rgba(72, 255, 0, 0.5) url('./../images/about/process_bg.png') no-repeat center; background-size: 100% auto;
+}
+.about .process li.circle-big li:nth-child(1) .circle-bg {
+	animation-name: process01; animation-duration: 3.3s; animation-timing-function: linear; animation-delay: 0.3s; animation-iteration-count: infinite;
+}
+.about .process li.circle-big li:nth-child(3) .circle-bg {
+	animation-name: process02; animation-duration: 3.3s; animation-timing-function: linear; animation-delay: 0.3s; animation-iteration-count: infinite;
+}
+.about .process li.circle-big li:nth-child(5) .circle-bg {
+	animation-name: process03; animation-duration: 3.3s; animation-timing-function: linear; animation-delay: 0.3s; animation-iteration-count: infinite;
+}
+.about .process li.circle-big .circle p {position: relative;}
+.about .process li.circle-sml {position: absolute; top: 50%; width: auto; height: auto; margin-top: -38px; margin-left: -56px; z-index: 1;}
+.about .process li.circle-sml .circle {width: 69px; height: 69px; background: rgba(0, 0, 0, 0.8);}
+.about .process li.circle-sml.outer {margin-top: -60px; margin-left: -63px;}
+.about .process li.circle-sml.outer::after {content: ''; display: block; position: absolute; top: 100%; left: 50%; width: 1px; height: 112px; margin-left: 3px; background: rgba(0, 0, 0, 0.2);}
+.about .process li.circle-sml.outer .circle {width: 109px; height: 109px; background: rgba(0, 0, 0, 0.9);}
+.about .process li.circle-sml .valign {font-family: "ITC Avant Garde Gothic Std Demi", sans-serif; font-size: 23px; color: #36be00;}
+.about .process .contents-desc {position: absolute; width: 100%; font-family: "ITC Avant Garde Gothic Std Demi", sans-serif; font-size: 17px; line-height: 22px; letter-spacing: 0; color: #1b5f00;}
+.about .process li.circle-big .contents-desc {margin-top: 40px;}
+.about .process li.circle-sml.outer .contents-desc {position: absolute; top: 100%; left: 50%; width: 164px; margin-top: 122px; margin-left: -82px;}
+
+.about .organization {display: none;}
+.about .organization .contents {width: 380px; margin-right: 339px;}
+.about .organization .outer_circle {position: relative; width: 866px; min-width: 320px; height: 866px; min-height: 320px; margin: 0 auto; background: url('./../images/about/org_bg-big.png') no-repeat center; background-size: 100% auto;}
+.about .organization .inner_circle {display: block; position: absolute; top: 50%; left: 50%; width: 15px; height: 15px; margin-top: -7px; margin-left: -7px; border-radius: 50%; background: #fff;}
+.about .organization ul {overflow: hidden; width: 100%; height: 100%; padding: 185px; background: url('./../images/about/org_bg-sml.png') no-repeat center; background-size: 100% auto;}
+.about .organization li {float: left; width: 50%; height: 50%;}
+.about .organization .circle_wrap {position: relative; width: 100%; height: 100%;}
+.about .organization .circle {position: absolute; width: 156px; height: 156px; border-radius: 50%; background: #fff; font-family: "ITC Avant Garde Gothic Std Bold", sans-serif; font-size: 20px; letter-spacing: -0.01em; color: #134d09; text-align: center;}
+.about .organization li:nth-child(1) .circle {top: 0; left: 0;}
+.about .organization li:nth-child(2) .circle {top: 0; right: 0;}
+.about .organization li:nth-child(3) .circle {bottom: 0; left: 0;}
+.about .organization li:nth-child(4) .circle {bottom: 0; right: 0;}
+.about .organization .bg_thumbs {overflow: hidden; position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+.about .organization .bg_thumbs div {float: left; width: 240px; height: 240px; max-width: 240px; max-height: 240px; border-radius: 50vh; background: #41e300;}
+.about .organization .bg_thumbs div.opacity10 {opacity: 0.19;}
+.about .organization .bg_thumbs div.opacity30 {opacity: 0.35;}
+.about .organization .bg_thumbs div.opacity60 {opacity: 0.6;}
+.about .organization .bg_thumbs div.pic {background-color: none; background-repeat: no-repeat; background-position: center; background-size: 100% auto;}
+
+.about .awards {display: none;}
+.about .awards .contents {width: 524px; margin-right: 196px;}
+.about .awards .list_wrap {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg);}
+.about .awards ul {float: left; display: table; margin-top: -232px;}
+.about .awards .partner {margin-top: -348px;}
+.about .awards .award {margin-left: 10px;}
+.about .awards li {margin-bottom: 10px;}
+.about .awards li .contents-obj {overflow: hidden; transform: rotate(-45deg); width: 232px; height: 232px; border-radius: 50%;}
+.about .awards .partner .contents-obj {background: rgba(65, 227, 0, 0.5);}
+.about .awards .award .contents-obj {background: rgba(65, 227, 0, 1);}
+
+
+.about .awards .partner {transform:translate(0px, 4000px);}
+.about .awards .award {transform:translate(0px, -4000px);}
+
+
+
+
+
+@media screen and (max-width: 1920px) {
+
+.about .we_are h2 {padding-right: 12.14vw;}
+.about .we_are ul {width: calc(50vw + 139px);}
+
+.about .we_do h2 {width: 30.85vw;}
+.about .we_do .do_wrap {width: 69.15vw;}
+
+.about .process .contents {margin-right: 9.22vw;}
+/*.about .process .valign {font-size: 1.04vw; line-height: 1.15vw;}
+.about .process li {margin-left: -1.77vw;}
+.about .process li.white {margin-bottom: 13.18vw;}
+.about .process li .circle {width: 14.01vw; height: 14.01vw;}
+.about .process li.circle-big {width: 40.57vw; height: 40.57vw; margin: 0 0.3125vw;}
+.about .process li.circle-big dt {top: 5.99vw;}
+.about .process li.circle-sml {margin-top: -1.98vw; margin-left: -2.92vw;}
+.about .process li.circle-sml .circle {width: 3.59vw; height: 3.59vw;}
+.about .process li.circle-sml.outer {margin-top: -3.125vw; margin-left: -3.28vw;}
+.about .process li.circle-sml.outer::after {height: 5.83vw; margin-left: 0.16vw;}
+.about .process li.circle-sml.outer .circle {width: 5.68vw; height: 5.68vw;}
+.about .process li.circle-sml .valign {font-size: 1.2vw;}
+.about .process .contents-desc {font-size: 0.89vw; line-height: 1.15vw;}
+.about .process li.circle-big .contents-desc {margin-top: 2.08vw;}
+.about .process li.circle-sml.outer .contents-desc {width: 8.54vw; margin-top: 6.35vw; margin-left: -4.27vw;}*/
+
+.about .organization .contents {margin-right: 17.66vw;}
+
+.about .awards .contents {margin-right: 10.21vw;}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1625px) {
+
+.about .process .valign {font-size: 1.23vw; line-height: 1.35vw;}
+.about .process li {margin-left: -2.09vw;}
+.about .process li.white {margin-bottom: 15.57vw;}
+.about .process li .circle {width: 16.55vw; height: 16.55vw;}
+.about .process li.circle-big {width: 47.94vw; height: 47.94vw; margin: 0 0.37vw;}
+.about .process li.circle-big dt {top: 7.08vw;}
+.about .process li.circle-sml {margin-top: -2.34vw; margin-left: -3.45vw;}
+.about .process li.circle-sml .circle {width: 4.25vw; height: 4.25vw;}
+.about .process li.circle-sml.outer {margin-top: -3.69vw; margin-left: -3.88vw;}
+.about .process li.circle-sml.outer::after {height: 6.89vw;}
+.about .process li.circle-sml.outer .circle {width: 6.71vw; height: 6.71vw;}
+.about .process li.circle-sml .valign {font-size: 1.42vw;}
+.about .process .contents-desc {font-size: 1.05vw; line-height: 1.35vw;}
+.about .process li.circle-big .contents-desc {margin-top: 2.46vw;}
+.about .process li.circle-sml.outer .contents-desc {width: 10.09vw; margin-top: 7.51vw; margin-left: -5.05vw;}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+
+/*vh*/
+.about section > .contents {top: 10vh;}
+.about section > .valign > h2 {font-size: 10vh;}
+.about .contents h2 {margin-bottom: 2.3vh; font-size: 5.7vh; line-height: 6vh;}
+
+.about .we_are h2 {padding-right: 23.3vh;}
+.about .we_are li .circle {width: 27.8vh; height: 27.8vh;}
+.about .we_are li .circle .circle-bg {width: 61vh; height: 61vh; margin-top: -30.5vh; margin-left: -30.5vh;}
+.about .we_are li .circle .contents-title {height: 27.8vh; padding: 0 4vh; font-size: 3.2vh; line-height: 3.2vh;}
+.about .we_are dl {padding-left: 3.8vh;}
+.about .we_are dt {font-size: 2vh; line-height: 2.4vh;}
+.about .we_are dd {margin-top: 2.1vh; font-size: 1.5vh; line-height: 2vh;}
+
+.about .we_do h2 {padding-right: 9.3vh;}
+.about .we_do li {width: 28.3vh; height: 28.3vh;}
+.about .we_do li:nth-child(2n) .circle-bg {margin-bottom: -4.3vh;}
+.about .we_do li:nth-child(2n-1) .circle-bg {margin-top: -4.3vh;}
+.about .we_do li .valign {font-size: 2.3vh;}
+
+/*.about .process .contents {width: 54.2vh;}
+.about .process .valign {font-size: 2vh; line-height: 2.2vh;}
+.about .process li {margin-left: -3.4vh;}
+.about .process li.white {margin-bottom: 25.3vh;}
+.about .process li .circle {width: 26.9vh; height: 26.9vh;}
+.about .process li.circle-big {width: 77.9vh; height: 77.9vh; margin: 0 0.6vh;}
+.about .process li.circle-big dt {top: 11.5vh;}
+.about .process li.circle-sml {margin-top: -3.8vh; margin-left: -5.6vh;}
+.about .process li.circle-sml .circle {width: 6.9vh; height: 6.9vh;}
+.about .process li.circle-sml.outer {margin-top: -6vh; margin-left: -6.3vh;}
+.about .process li.circle-sml.outer::after {height: 11.2vh; margin-left: 0.3vh;}
+.about .process li.circle-sml.outer .circle {width: 10.9vh; height: 10.9vh;}
+.about .process li.circle-sml .valign {font-size: 2.3vh;}
+.about .process .contents-desc {font-size: 1.7vh; line-height: 2.2vh;}
+.about .process li.circle-big .contents-desc {margin-top: 4vh;}
+.about .process li.circle-sml.outer .contents-desc {width: 16.4vh; margin-top: 12.2vh; margin-left: -8.2vh;}
+
+.about .organization .contents {width: 38vh;}
+.about .organization .outer_circle {width: 86.6vh; height: 86.6vh;}
+.about .organization .inner_circle {width: 1.5vh; height: 1.5vh; margin-top: -0.7vh; margin-left: -0.7vh;}
+.about .organization ul {padding: 18.5vh;}
+.about .organization .circle {width: 15.6vh; height: 15.6vh; font-size: 2vh;}*/
+
+.about .awards .contents {width: 52.4vh;}
+.about .awards ul {margin-top: -23.2vh;}
+.about .awards .partner {margin-top: -34.8vh;}
+.about .awards .award {margin-left: 1vh;}
+.about .awards li {margin-bottom: 1vh;}
+.about .awards li .contents-obj {width: 23.2vh; height: 23.2vh;}
+
+/*vw*/
+.about section > .contents {top: 5.21vw;}
+.about section > .valign > h2 { font-size: 5.21vw;}
+.about .contents h2 {margin-bottom: 1.2vw; font-size: 2.97vw; line-height: 3.125vw;}
+
+.about .we_are h2 {padding-right: 12.14vw;}
+.about .we_are li {width: 34.01vw; margin-bottom: 0.73vw;}
+.about .we_are li .circle {width: 14.48vw; height: 14.48vw;}
+.about .we_are li .circle .circle-bg {width: 31.77vw; height: 31.77vw; margin-top: -15.885vw; margin-left: -15.885vw;}
+.about .we_are li .circle .contents-title {height: 14.48vw; padding: 0 2.08vw; font-size: 1.67vw; line-height: 1.67vw;}
+.about .we_are dl {padding-left: 1.98vw;}
+.about .we_are dt {font-size: 1.04vw; line-height: 1.25vw;}
+.about .we_are dd {margin-top: 1.09vw; font-size: 0.78vw; line-height: 1.04vw;}
+
+.about .we_do h2 {padding-right: 4.84vw;}
+.about .we_do li {width: 14.74vw; height: 14.74vw;}
+.about .we_do li:nth-child(2n) .circle-bg {margin-bottom: -2.24vw;}
+.about .we_do li:nth-child(2n-1) .circle-bg {margin-top: -2.24vw;}
+.about .we_do li .valign {font-size: 1.2vw;}
+
+/*.about .process .contents {width: 28.23vw;}
+.about .process .valign {font-size: 1.04vw; line-height: 1.15vw;}
+.about .process li {margin-left: -1.77vw;}
+.about .process li.white {margin-bottom: 13.18vw;}
+.about .process li .circle {width: 14.01vw; height: 14.01vw;}
+.about .process li.circle-big {width: 40.57vw; height: 40.57vw; margin: 0 0.3125vw;}
+.about .process li.circle-big dt {top: 5.99vw;}
+.about .process li.circle-sml {margin-top: -1.98vw; margin-left: -2.92vw;}
+.about .process li.circle-sml .circle {width: 3.59vw; height: 3.59vw;}
+.about .process li.circle-sml.outer {margin-top: -3.125vw; margin-left: -3.28vw;}
+.about .process li.circle-sml.outer::after {height: 5.83vw; margin-left: 0.16vw;}
+.about .process li.circle-sml.outer .circle {width: 5.68vw; height: 5.68vw;}
+.about .process li.circle-sml .valign {font-size: 1.2vw;}
+.about .process .contents-desc {font-size: 0.89vw; line-height: 1.15vw;}
+.about .process li.circle-big .contents-desc {margin-top: 2.08vw;}
+.about .process li.circle-sml.outer .contents-desc {width: 8.54vw; margin-top: 6.35vw; margin-left: -4.27vw;}
+
+.about .organization .contents {width: 19.79vw;}
+.about .organization .outer_circle {width: 45.1vw; height: 45.1vw;}
+.about .organization .inner_circle {width: 0.78vw; height: 0.78vw; margin-top: -0.39vw; margin-left: -0.39vw;}
+.about .organization ul {padding: 9.64vw;}
+.about .organization .circle {width: 8.125vw; height: 8.125vw; font-size: 1.04vw;}*/
+
+.about .awards .contents {width: 27.29vw;}
+.about .awards ul {margin-top: 12.08vw;}
+.about .awards .partner {margin-top: -18.125vw;}
+.about .awards .award {margin-left: 0.52vw;}
+.about .awards li {margin-bottom: 0.52vw;}
+.about .awards li .contents-obj {width: 12.08vw; height: 12.08vw;}
+
+/*1440*/
+.about section > .contents {top: 6.94vw;}
+.about section > .valign > h2 {font-size: 6.94vw;}
+.about .contents h2 {margin-bottom: 1.6vw; font-size: 3.96vw; line-height: 4.17vw;}
+
+.about .we_are h2 {padding-right: 12.14vw;}
+.about .we_are ul {width: 59.655vw;}
+.about .we_are li {width: 45.35vw; margin-bottom: 0.97vw;}
+.about .we_are li .circle {width: 19.31vw; height: 19.31vw;}
+.about .we_are li .circle .circle-bg {width: 42.36vw; height: 42.36vw; margin-top: -21.18vw; margin-left: -21.18vw;}
+.about .we_are li .circle .contents-title {height: 19.31vw; padding: 0 2.78vw; font-size: 2.22vw; line-height: 2.22vw;}
+.about .we_are dl {padding-left: 2.64vw;}
+.about .we_are dt {font-size: 1.39vw; line-height: 1.67vw;}
+.about .we_are dd {margin-top: 1.46vw; font-size: 1.04vw; line-height: 1.39vw;}
+
+.about .we_do h2 {padding-right: 6.46vw;}
+.about .we_do li {width: 19.65vw; height: 19.65vw;}
+.about .we_do li:nth-child(2n) .circle-bg {margin-bottom: -2.99vw;}
+.about .we_do li:nth-child(2n-1) .circle-bg {margin-top: -2.99vw;}
+.about .we_do li .valign {font-size: 1.6vw;}
+
+.about .process .contents {width: 37.64vw;}
+/*.about .process .valign {font-size: 1.39vw; line-height: 1.53vw;}
+.about .process li {margin-left: -2.36vw;}
+.about .process li.white {margin-bottom: 17.57vw;}
+.about .process li .circle {width: 18.68vw; height: 18.68vw;}
+.about .process li.circle-big {width: 54.1vw; height: 54.1vw; margin: 0 0.42vw;}
+.about .process li.circle-big dt {top: 7.99vw;}
+.about .process li.circle-sml {margin-top: -2.64vw; margin-left: -3.89vw;}
+.about .process li.circle-sml .circle {width: 4.79vw; height: 4.79vw;}
+.about .process li.circle-sml.outer {margin-top: -4.17vw; margin-left: -4.375vw;}
+.about .process li.circle-sml.outer::after {height: 7.78vw;}
+.about .process li.circle-sml.outer .circle {width: 7.57vw; height: 7.57vw;}
+.about .process li.circle-sml .valign {font-size: 1.6vw;}
+.about .process .contents-desc {font-size: 1.18vw; line-height: 1.53vw;}
+.about .process li.circle-big .contents-desc {margin-top: 2.78vw;}
+.about .process li.circle-sml.outer .contents-desc {width: 11.39vw; margin-top: 8.47vw; margin-left: -5.69vw;}*/
+
+.about .organization .contents {width: 26.89vw;}
+/*.about .organization .outer_circle {width: 60.14vw; height: 60.14vw;}
+.about .organization .inner_circle {width: 1.04vw; height: 1.04vw; margin-top: -0.52vw; margin-left: -0.52vw;}
+.about .organization ul {padding: 12.85vw;}
+.about .organization .circle {width: 10.83vw; height: 10.83vw; font-size: 1.39vw;}*/
+
+.about .awards .contents {width: 36.39vw;}
+.about .awards ul {margin-top: -16.11vw;}
+.about .awards .partner {margin-top: -24.17vw;}
+.about .awards .award {margin-left: 0.69vw;}
+.about .awards li {margin-bottom: 0.69vw;}
+.about .awards li .contents-obj {width: 16.11vw; height: 16.11vw;}
+
+.about .awards .partner {transform:translate(0vw, 208.333vw);}
+.about .awards .award {transform:translate(0vw, -208.333vw);}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1153px) {
+
+.about .we_are dt {font-size: 16px; line-height: 19px;}
+.about .we_are dd {font-size: 12px; line-height: 16px;}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 990px) {
+
+.about .organization .outer_circle {width: 87.47vw; height: 87.47vw;}
+.about .organization .inner_circle {width: 1.52vw; height: 1.52vw; margin-top: -0.576vw; margin-left: -0.576vw;}
+.about .organization ul {padding: 18.69vw;}
+.about .organization .circle {width: 15.76vw; height: 15.76vw; font-size: 2.02vw;}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (orientation: portrait) {
+
+.portrait .about section {max-height: 130.99vw; padding: 0;}
+.portrait .about section > .contents {position: relative; top: 0; left: 0;}
+.portrait .about section > .valign > h2 {font-size: 13.02vw;}
+.portrait .about .contents h2 {margin-bottom: 0; font-size: 7.42vw; line-height: 7.81vw; text-align: center;}
+.portrait .about .contents p {display: none;}
+
+.portrait .intro .contents-obj {height: auto;}
+.portrait .intro .contents-obj img {width: 100%; height: auto;}
+
+.portrait .about .we_are h2 {padding-right: 5.73vw;}
+.portrait .about .we_are ul {width: 42.45%;}
+.portrait .about .we_are li {width: 36.2vw; margin-bottom: 1.69vw;}
+.portrait .about .we_are li .circle {width: 36.2vw; height: 36.2vw;}
+.portrait .about .we_are li .circle .circle-bg {width: 79.43vw; height: 79.43vw; margin-top: -39.715vw; margin-left: -39.715vw;}
+.portrait .about .we_are li .circle .contents-title {height: 36.2vw; padding: 0 5.21vw; font-size: 4.17vw; line-height: 4.17vw;}
+.portrait .about .we_are dl {display: none;}
+
+.portrait .about .we_do > .valign {display: block;}
+.portrait .about .we_do h2 {display: block; width: 100%; padding: 5.47vw 0 4.6875vw; text-align: center;}
+.portrait .about .we_do .do_wrap {display: block; width: 100%;}
+.portrait .about .we_do ul {display: table; margin: 0 auto;}
+.portrait .about .we_do li {width: 29.95vw; height: 29.95vw;}
+.portrait .about .we_do li:nth-child(2n) .circle-bg {bottom: 0; margin-bottom: 0; left: 100%; margin-left: -4.43vw;}
+.portrait .about .we_do li:nth-child(2n-1) .circle-bg {top: 0; margin-top: 0; left: auto; right: 100%; margin-right: -4.43vw;}
+.portrait .about .we_do li:last-child {display: none;}
+.portrait .about .we_do li .valign {font-size: 2.47vw; letter-spacing: -0.01em;}
+
+.portrait .about .process .wrapper.valign {position: relative; height: auto;}
+.portrait .about .process .contents {width: 100%; margin-right: 0;}
+.portrait .about .process .contents h2 {padding: 4.56vw 0 2.73vw;}
+.portrait .about .process .valign {font-size: 2.21vw; line-height: 2.21vw; letter-spacing: -0.01em;}
+.portrait .about .process li.white .valign {font-size: 2.86vw; letter-spacing: -0.01em;}
+.portrait .about .process li {display: inline-block; margin-left: -3.125vw;}
+.portrait .about .process li.white {display: table; margin: -4.69vw auto 0;}
+.portrait .about .process .wrapper li.white:first-child, .about .process .wrapper > ol > li.white:last-child {margin-top: 0; margin-left: auto;}
+.portrait .about .process li .circle {width: 24.48vw; height: 24.48vw;}
+.portrait .about .process li.circle-big {width: 64.19vw; height: 64.19vw; margin: -10.42vw 0 -11.07vw;}
+.portrait .about .process li.circle-big .circle {width: 22.14vw; height: 22.14vw;}
+.portrait .about .process li.circle-big dt {top: 14.45vw; font-size: 2.86vw; letter-spacing: -0.01em;}
+.portrait .about .process li.circle-sml {margin-top: -2.99vw; margin-left: -4.82vw;}
+.portrait .about .process li.circle-sml .circle {width: 5.73vw; height: 5.73vw;}
+.portrait .about .process li.circle-sml.outer {top: 100%; left: 50%; margin-top: -26.56vw; margin-left: -3.78vw;}
+.portrait .about .process li.circle-sml.outer::after {display: none;}
+.portrait .about .process li.circle-sml.outer .circle {width: 7.55vw; height: 7.55vw;}
+.portrait .about .process li.circle-sml .valign {font-size: 1.95vw;}
+.portrait .about .process .contents-desc {display: none;}
+
+.portrait .about .organization .wrapper.valign {position: static; height: auto;}
+.portrait .about .organization .contents {width: 100%; margin-right: 0;}
+.portrait .about .organization .contents h2 {padding: 8.46vw 0 6.25vw;}
+.portrait .about .organization .outer_circle {width: 96.875vw; height: 96.875vw;}
+.portrait .about .organization .inner_circle {width: 1.56vw; height: 1.56vw; margin-top: -0.78vw; margin-left: -0.78vw;}
+.portrait .about .organization ul {padding: 18.62vw;}
+.portrait .about .organization .circle {width: 20.83vw; height: 20.83vw; font-size: 2.21vw; letter-spacing: -0.01em;}
+
+.portrait .about .awards .contents {display: table; width: auto; margin-right: 0; padding: 5.86vw 7.29vw;}
+.portrait .about .awards .contents h2 {text-align: left; }
+.portrait .about .awards ul {margin-top: -26.56vw;}
+.portrait .about .awards .partner {margin-top: -39.84vw;}
+.portrait .about .awards .award {margin-left: 29.16vw;}
+.portrait .about .awards li {margin-bottom: 1.3vw;}
+.portrait .about .awards li .contents-obj {width: 26.56vw; height: 26.56vw;}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.about .btn_bottom {width: 9.11vw; min-width: 46px; height: 9.11vw; min-height: 46px; margin-left: -4.555vw;}
+
+.about section {max-height: 130.99vw; padding: 0;}
+.about section > .contents {position: relative; top: 0; left: 0;}
+.about section > .valign > h2 {font-size: 13.02vw;}
+.about .contents h2 {margin-bottom: 0; font-size: 7.42vw; line-height: 7.81vw; text-align: center;}
+.about .contents p {display: none;}
+
+.intro .contents-obj {height: auto;}
+.intro .contents-obj img {width: 100%; height: auto;}
+
+.about .we_are h2 {padding-right: 5.73vw;}
+.about .we_are ul {width: 42.45%;}
+.about .we_are li {width: 36.2vw; margin-bottom: 1.69vw;}
+.about .we_are li .circle {width: 36.2vw; height: 36.2vw;}
+.about .we_are li .circle .circle-bg {width: 79.43vw; height: 79.43vw; margin-top: -39.715vw; margin-left: -39.715vw;}
+.about .we_are li .circle .contents-title {height: 36.2vw; padding: 0 5.21vw; font-size: 4.17vw; line-height: 4.17vw;}
+.about .we_are dl {display: none;}
+
+.about .we_do > .valign {display: block;}
+.about .we_do h2 {display: block; width: 100%; padding: 5.47vw 0 4.6875vw; text-align: center;}
+.about .we_do .do_wrap {display: block; width: 100%;}
+.about .we_do ul {display: table; margin: 0 auto;}
+.about .we_do li {width: 29.95vw; height: 29.95vw;}
+.about .we_do li:nth-child(2n) .circle-bg {bottom: 0; margin-bottom: 0; left: 100%; margin-left: -4.43vw;}
+.about .we_do li:nth-child(2n-1) .circle-bg {top: 0; margin-top: 0; left: auto; right: 100%; margin-right: -4.43vw;}
+.about .we_do li:last-child {display: none;}
+.about .we_do li .valign {font-size: 2.47vw; letter-spacing: -0.01em;}
+
+.about .process .wrapper.valign {position: relative; height: auto;}
+.about .process .contents {width: 100%; margin-right: 0;}
+.about .process .contents h2 {padding: 4.56vw 0 2.73vw;}
+.about .process .valign {font-size: 2.21vw; line-height: 2.21vw; letter-spacing: -0.01em;}
+.about .process li.white .valign {font-size: 2.86vw; letter-spacing: -0.01em;}
+.about .process li {display: inline-block; margin-left: -3.125vw;}
+.about .process li.white {display: table; margin: -4.69vw auto 0;}
+.about .process .wrapper li.white:first-child, .about .process .wrapper > ol > li.white:last-child {margin-top: 0; margin-left: auto;}
+.about .process li .circle {width: 24.48vw; height: 24.48vw;}
+.about .process li.circle-big {width: 64.19vw; height: 64.19vw; margin: -10.42vw 0 -11.07vw;}
+.about .process li.circle-big .circle {width: 22.14vw; height: 22.14vw;}
+.about .process li.circle-big dt {top: 14.45vw; font-size: 2.86vw; letter-spacing: -0.01em;}
+.about .process li.circle-sml {margin-top: -2.99vw; margin-left: -4.82vw;}
+.about .process li.circle-sml .circle {width: 5.73vw; height: 5.73vw;}
+.about .process li.circle-sml.outer {top: 100%; left: 50%; margin-top: -26.56vw; margin-left: -3.78vw;}
+.about .process li.circle-sml.outer::after {display: none;}
+.about .process li.circle-sml.outer .circle {width: 7.55vw; height: 7.55vw;}
+.about .process li.circle-sml .valign {font-size: 1.95vw;}
+.about .process .contents-desc {display: none;}
+
+.about .organization .wrapper.valign {position: static; height: auto;}
+.about .organization .contents {width: 100%; margin-right: 0;}
+.about .organization .contents h2 {padding: 8.46vw 0 6.25vw;}
+.about .organization .outer_circle {width: 96.875vw; height: 96.875vw;}
+.about .organization .inner_circle {width: 1.56vw; height: 1.56vw; margin-top: -0.78vw; margin-left: -0.78vw;}
+.about .organization ul {padding: 18.62vw;}
+.about .organization .circle {width: 20.83vw; height: 20.83vw; font-size: 2.21vw; letter-spacing: -0.01em;}
+
+.about .awards .contents {display: table; width: auto; margin-right: 0; padding: 5.86vw 7.29vw;}
+.about .awards .contents h2 {text-align: left; }
+.about .awards ul {margin-top: -26.56vw;}
+.about .awards .partner {margin-top: -39.84vw;}
+.about .awards .award {margin-left: 29.16vw;}
+.about .awards li {margin-bottom: 1.3vw;}
+.about .awards li .contents-obj {width: 26.56vw; height: 26.56vw;}
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
+.device .about .btn_bottom {position: absolute; bottom: 0; left: 50%; width: 60px; height: 60px; margin-left: -30px; border-radius: 50%; background: rgba(0, 0, 0, 0.3) url('./../images/btn_about.png') no-repeat center; background-size: 100% auto;
+	animation-name: btnMove; animation-duration: 0.9s; animation-timing-function: ease-out; animation-delay: 0.3s; animation-iteration-count: infinite;
+}
+
+.device .about section > .contents {position: absolute; top: 11.3vh; left: 7.55vw;}
+.device .about section > .valign > h2 {font-size: 11.3vh;}
+.device .about .contents h2 {margin-bottom: 0; padding: 0; font-size: 3.96vw; line-height: 4.17vw; text-align: left;}
+
+.device .about .we_are h2 {padding-right: 16.18vw;}
+.device .about .we_are li {width: 30.7vh; margin-bottom: 1.49vh;}
+.device .about .we_are li .circle {width: 30.7vh; height: 30.7vh;}
+.device .about .we_are li .circle .circle-bg {width: 69.3vh; height: 69.3vh; margin-top: -34.65vh; margin-left: -34.65vh;}
+.device .about .we_are li .circle .contents-title {height: 30.7vh; padding: 0 2.78vw; font-size: 3.62vh; line-height: 3.62vh;}
+
+.device .about .we_do > .valign {display: table;}
+.device .about .we_do h2 {display: table-cell; width: auto; height: 100%; padding-right: 6.46vw; text-align: right;}
+.device .about .we_do .do_wrap {display: table-cell; width: 69.15vw; height: 100%;}
+.device .about .we_do ul {margin: 0;}
+.device .about .we_do li {width: 19.65vw; height: 19.65vw;}
+.device .about .we_do li:nth-child(2n) .circle-bg {bottom: 100%; left: 0; margin-left: 0; margin-bottom: -2.99vw;}
+.device .about .we_do li:nth-child(2n-1) .circle-bg {top: 100%; right: 0; margin-right: 0; margin-top: -2.99vw;}
+.device .about .we_do li .valign {font-size: 1.6vw;}
+
+.device .about .process .contents {width: auto;}
+.device .about .process .wrapper {position: absolute; top: 50%; transform: translateY(-50%);}
+.device .about .process .valign {font-size: 1.39vw; line-height: 1.53vw;}
+.device .about .process li.white .valign {font-size: 1.86vw;}
+.device .about .process li {display: inline-block; margin: 0; margin-left: -2.36vw;}
+.device .about .process li.white {margin-bottom: 16.21vw;}
+.device .about .process li .circle {width: 15.68vw; height: 15.68vw;}
+.device .about .process li.circle-big {width: 48.1vw; height: 48.1vw; margin: 0 0.42vw;}
+.device .about .process li.circle-big dt {top: 7.99vw; font-size: 1.86vw;}
+.device .about .process li.circle-sml {margin-top: -2.64vw; margin-left: -3.89vw;}
+.device .about .process li.circle-sml .circle {width: 4.79vw; height: 4.79vw;}
+.device .about .process li.circle-sml.outer {top: 50%; left: auto; margin-top: -4.17vw; margin-left: -5.375vw;}
+.device .about .process li.circle-sml.outer::after {height: 7.78vw;}
+.device .about .process li.circle-sml.outer .circle {width: 7.57vw; height: 7.57vw;}
+.device .about .process li.circle-sml .valign {font-size: 1.6vw;}
+.device .about .process .contents-desc {font-size: 1.18vw; line-height: 1.53vw;}
+.device .about .process li.circle-big .contents-desc {margin-top: 2.78vw;}
+.device .about .process li.circle-sml.outer .contents-desc {width: 11.39vw; margin-top: 8.47vw; margin-left: -5.69vw;}
+
+.device .about .organization .contents {width: auto;}
+.device .about .organization .outer_circle {width: 100vh; height: 100vh;}
+.device .about .organization .inner_circle {width: 1.04vw; height: 1.04vw; margin-top: -0.52vw; margin-left: -0.52vw;}
+.device .about .organization ul {padding: 21.11vh;}
+.device .about .organization .circle {width: 10.83vw; height: 10.83vw; font-size: 1.39vw;}
+
+.device .about .awards .contents {width: auto; padding: 0;}
+.device .about .awards ul {margin-top: -16.11vw;}
+.device .about .awards .partner {margin-top: -24.17vw;}
+.device .about .awards .award {margin-left: 0.69vw;}
+.device .about .awards li {margin-bottom: 0.69vw;}
+.device .about .awards li .contents-obj {width: 16.11vw; height: 16.11vw;}
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 472px) {
+
+.about .btn_bottom {margin-left: -23px;}
+
+}
+
+
+
+
+
+
+
+
+
+

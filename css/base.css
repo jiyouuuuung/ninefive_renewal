@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+body {overflow-x: hidden; min-height: 320px;margin: 0 auto;}
+main {overflow: hidden; position: relative;}
+
+section {position: relative; min-width: 320px; min-height: 100%;}
+
+.clearfy > *:last-child::after {content: ''; clear: both;}
+.valign {display: table; width: 100%; height: 100%;}
+.valign > * {display: table-cell; vertical-align: middle;}
+.half > * {float: left; width: 50%;}
+.quat > * {float: left; width: 25%;}
+.full > * {width: 100%;}
+.contents-obj img {display: block; width: 100%;}
+.contents-obj.portrait {height: 100%;}
+.contents-obj.portrait img {width: auto; height: 100%; margin: auto;}
+.contents-video {overflow: hidden; position: relative;}
+.contents-video video {display: block; width: 100%;}
+.contents-video .cover {display: block; position: absolute; top: 0; left: 0; width: 100.1%;}
+.contents-video .video-btn {opacity: 0.6; display: block; position: absolute; top: 50%; left: 50%; width: 77px; height: 77px; margin-left: -38.5px; margin-top: -38.5px; background: url('./../images/btn_play.png') no-repeat center top; background-size: 100% auto;}
+.contents-video .video-btn::after {content: ''; box-sizing: border-box; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50vh; border: 2px solid #fff;}
+.video_wrap button:hover .contents-video .video-btn {background-position: center bottom;}
+.video_wrap button:hover .contents-video .video-btn::after {border-color: #65d60c;}
+.video_wrap.active button .contents-video .video-btn {display: none;}
+.video_wrap.active button:hover .contents-video .video-btn {display: block; background-image: url('./../images/btn_pause.png'); background-position: center top;}
+.video_wrap.active button:hover .contents-video .video-btn::after {border-color: #fff;}
+.video_wrap.active button .contents-video .video-btn:hover {background-position: center bottom;}
+.video_wrap.active button .contents-video .video-btn:hover::after {border-color: #65d60c;}
+.contents-title {font-family: 'texgyreadventor_bold'; font-size: 16px; line-height: 20px;}
+.contents-desc {font-family: "Helvetica Neue Roman", "NanumBarunGothic", "Dotum", "돋움", sans-serif; font-size: 14px; line-height: 20px; letter-spacing: -0.015em; color: #144500;}
+.contents-sub {font-size: 18px; line-height: 24px;}
+.contents-sort {font-family: "Helvetica Neue Roman", sans-serif; font-size: 12px;}
+.contents-date {}
+.nospacing {letter-spacing: 0;}
+.hidden {overflow: hidden; position: absolute; clip: rect(0, 0, 0, 0); width: 1px; height: 1px; margin: -1px; padding: 0; border: none;}
+.pc_only {display: block;}
+.m_only {display: none;}
+.port_only {display: none;}
+.nowrap {white-space: nowrap;}
+
+.lang {position: fixed; right: 0; top: 0; display: table; min-width: auto; height: auto; min-height: auto; z-index: 101;}
+.lang button {display: block; opacity: 1; width: 60px; height: 60px; border-radius: 50%; background: rgba(0, 0, 0, 0.2); font-family:'ITC Avant Garde Gothic Std Bold', sans-serif; font-size: 15px; letter-spacing: 0.03em; color: #fff;}
+.safari .lang button {padding: 5px 0 0 2px;}
+.lang .lang_list {display: none; position: absolute; top: 100%;}
+.lang.active .lang_list {display: block;}
+.lang.active .lang_list button:focus, .lang.active .lang_list button:hover {background: #fff; color: #404040;}
+.device .lang .lang_list button:focus, .device .lang .lang_list button:hover {background: rgba(255, 255, 255, 0.1); color: #fff;}
+
+.gnb {z-index: 100;}
+.gnb .btn_gnb {position: fixed; bottom: 50%; right: 0; width: 80px; height: 80px; margin-bottom: -40px; border-radius: 50vh; background: url('./../images/logo.png') no-repeat center; background-size: 100% auto; z-index: 100;}
+.gnb .btn_gnb:focus, .gnb .btn_gnb:hover {background-image: url('./../images/logo_h.png');}
+.device .gnb .btn_gnb:focus, .device .gnb .btn_gnb:hover {background-image: url('./../images/logo.png');}
+.gnb.active .btn_gnb {opacity: 0.2; transform: scale(0); background-image: url('./../images/logo.png');}
+.gnb .btn_back {position: absolute; top: 50%; left: 50%; width: 37px; height: 37px; margin-top: -18.5px; margin-left: -18.5px; border-radius: 50vh; background: url('./../images/btn_back.png') no-repeat center; background-size: 100% auto; z-index: 1;}
+.gnb .btn_back:focus, .gnb .btn_back:hover {background-image: url('./../images/btn_back_h.png');}
+.device .gnb .btn_back:focus, .device .gnb .btn_back:hover {background-image: url('./../images/btn_back.png');}
+.gnb nav {overflow: hidden; display: none; position: fixed; right: 0; left: auto; top: 50%; transform-origin: 244px center; width: 304px; height: 304px; margin-top: -152px; border-radius: 50vh; background: #202020; font-family: 'texgyreadventor_bold'; font-size: 18px; line-height: 20px; letter-spacing: 0.03em; color: #fff; z-index: 100;}
+.gnb nav::before {content: ''; display: block; position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: rgba(255, 255, 255, 0.1);}
+.gnb nav::after {content: ''; display: block; position: absolute; top: 0; left: 50%; width: 1px; height: 100%; background: rgba(255, 255, 255, 0.1);}
+/*.gnb.active nav {display: block; transform: scale(1);}*/
+.gnb nav a:hover, .gnb nav li.active a {color: #48ff00;}
+.device .gnb nav a:focus, .device .gnb nav a:hover {color: #fff;}
+.device .gnb nav .submenu a:focus, .device .gnb nav .submenu a:hover {color: #a3a3a3;}
+.gnb nav > .valign {position: absolute; top: 0; width: 50%; padding: 0 25px;}
+.gnb nav > .valign.left {left: 0;}
+.gnb nav > .valign.right {right: 0;}
+.gnb nav .menu li.menu-about {position: absolute; bottom: 22px; left: 0; width: 200%; text-align: center; z-index: 1;}
+.gnb nav .menu li.submenu {position: absolute; top: 14px; left: 0; width: 200%; text-align: center; z-index: 1;}
+.gnb nav .submenu {font-size: 12px; line-height: 30px; letter-spacing: 0.06em; color: #a3a3a3; text-align: right;}
+
+
+
+
+
+
+@media screen and (orientation: portrait) {
+
+.portrait .port_only {display: block;}
+
+.portrait .gnb .btn_gnb {width: 90px; height: 90px; margin-bottom: -45px; box-shadow: 0px 0px 0px 2px rgba(54, 190, 0, 0.2);}
+.portrait .gnb .btn_back {width: 60px; height: 60px; margin-top: -30px; margin-left: -30px;}
+.portrait .gnb nav {transform-origin: right center; width: 502px; height: 502px; margin-top: -251px; font-size: 30px; line-height: 24px; letter-spacing: 0.03em;}
+.portrait .gnb nav > .valign {padding: 0 39px;}
+.portrait .gnb nav .menu li.menu-about {bottom: 39px;}
+.portrait .gnb nav .menu li.submenu {top: 19px;}
+.portrait .gnb nav .submenu {font-size: 20px; line-height: 49px; letter-spacing: 0.06em;}
+
+.portrait .worklist .btn_main {bottom: 0; right: 0;}
+
+.portrait .worklist .btn_media {left: 0;}
+
+.portrait .media .btn_worklist {bottom: 0; right: 0;}
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.contents-title {font-size: 18px; line-height: 22px;}
+.contents-desc {font-family: "arial", sans-serif; font-size: 15px; line-height: 20px; letter-spacing: 0;}
+.contents-sort {font-family: "Helvetica Neue Roman", sans-serif; font-size: 13px;}
+
+.lang button {width: 9.11vw; min-width: 46px; height: 9.11vw; min-height: 46px; font-size: 2.34vw; letter-spacing: 0.03em; color: #fff;}
+.lang.active .lang_list button:focus, .lang.active .lang_list button:hover {color: #434343;}
+.device .lang.active .lang_list button:focus, .device .lang.active .lang_list button:hover {color: #fff;}
+
+.gnb .btn_gnb {width: 11.72vw; height: 11.72vw; margin-bottom: -5.86vw; box-shadow: 0px 0px 0px 2px rgba(54, 190, 0, 0.2);}
+.gnb .btn_back {width: 7.81vw; height: 7.81vw; margin-top: -3.905vw;margin-left: -3.905vw;}
+.gnb nav {transform-origin: right center; width: 65.36vw; height: 65.36vw; margin-top: -32.68vw; font-size: 3.905vw; line-height: 3.125vw; letter-spacing: 0.03em;}
+.gnb nav > .valign {padding: 0 5.08vw;}
+.gnb nav .menu li.menu-about {bottom: 5.08vw;}
+.gnb nav .menu li.submenu {top: 2.47vw;}
+.gnb nav .submenu {font-size: 2.6vw; line-height: 6.38vw; letter-spacing: 0.06em;}
+
+.portrait .gnb .btn_gnb {width: 11.72vw; height: 11.72vw; margin-bottom: -5.86vw;}
+.portrait .gnb .btn_back {width: 7.81vw; height: 7.81vw; margin-top: -3.905vw;margin-left: -3.905vw;}
+.portrait .gnb nav {transform-origin: right center; width: 65.36vw; height: 65.36vw; margin-top: -32.68vw; font-size: 3.905vw; line-height: 3.125vw; letter-spacing: 0.03em;}
+.portrait .gnb nav > .valign {padding: 0 5.08vw;}
+.portrait .gnb nav .menu li.menu-about {bottom: 5.08vw;}
+.portrait .gnb nav .menu li.submenu {top: 2.47vw;}
+.portrait .gnb nav .submenu {font-size: 2.6vw; line-height: 6.38vw; letter-spacing: 0.06em;}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 461px) {
+
+.gnb .btn_gnb {width: 48px; height: 48px; margin-bottom: -24px;}
+.gnb .btn_back {width: 36px; height: 36px; margin-top: -18px; margin-left: -18px;}
+.gnb nav {width: 301px; height: 301px; margin-top: -151px; font-size: 18px; line-height: 14px;}
+.gnb nav > .valign {padding: 0 23px;}
+.gnb nav .menu li.menu-about {bottom: 23px;}
+.gnb nav .menu li.submenu {top: 8px;}
+.gnb nav .submenu {font-size: 12px; line-height: 29px;}
+
+.portrait .gnb .btn_gnb {width: 48px; height: 48px; margin-bottom: -24px;}
+.portrait .gnb .btn_back {width: 36px; height: 36px; margin-top: -18px; margin-left: -18px;}
+.portrait .gnb nav {width: 301px; height: 301px; margin-top: -151px; font-size: 18px; line-height: 14px;}
+.portrait .gnb nav > .valign {padding: 0 23px;}
+.portrait .gnb nav .menu li.menu-about {bottom: 23px;}
+.portrait .gnb nav .menu li.submenu {top: 8px;}
+.portrait .gnb nav .submenu {font-size: 12px; line-height: 29px;}
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 501px) {
+
+.lang button {font-size: 12px;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

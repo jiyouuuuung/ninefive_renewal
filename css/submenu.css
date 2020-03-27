@@ -1,0 +1,335 @@
+@charset "utf-8";
+
+#submenu {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 99;}
+#submenu .submenu_back {position: absolute; top: 0; right: 0; width: 945px; height: 100%; background: #101010;}
+#submenu .contents .contents-title {margin-top: 63px; font-family:'texgyreadventor_bold'; font-size: 80px; line-height: 70px; text-transform: uppercase;}
+#submenu .contents .contents-desc {margin-top: 32px; font-family: "Helvetica Neue Lt"; font-size: 23px; line-height: 36px; color: #a9a9a9;}
+#submenu .contents_sml .contents-title {margin: 80px 0 25px; font-family:"Helvetica Neue Md"; font-size: 27px; line-height: 30px;}
+#submenu .contents_sml .contents-title .addtion {opacity: 0.7; font-size: 15px; color: #55ad0f;}
+#submenu label {cursor: pointer;}
+#submenu input, #submenu .input_look, #submenu textarea {padding: 0 14px; border-radius: 23px; font-family: "Helvetica Neue Roman"; font-size: 15px; line-height: 28px;}
+#submenu input:not(.hidden), #submenu .input_look {height: 45px; line-height: 45px;}
+#submenu textarea {height: 190px; padding: 13px 16px;}
+#submenu .input_look {color: #666;}
+#submenu .text_wrap {position: relative;}
+#submenu .text_wrap input:focus + .placeholder, #submenu .text_wrap input:active + .placeholder, #submenu .text_wrap textarea:focus + .placeholder, #submenu .text_wrap textarea:active + .placeholder {display: none;}
+#submenu .placeholder {position: absolute; top: 0; left: 0; padding: 9px 14px; font-family: "Helvetica Neue Roman"; font-size: 15px; line-height: 28px; color: #666;}
+#submenu textarea + .placeholder {padding: 13px 16px;}
+#submenu .placeholder .highlight {color: #55ad0f;}
+#submenu .inputrow {display: table; width: 100%; margin-bottom: 10px;}
+#submenu .inputrow:last-of-type {margin-bottom: 0;}
+#submenu .inputrow.half > div:first-child {padding-right: 5px;}
+#submenu .inputrow.half > div:last-child {padding-left: 5px;}
+#submenu .btn_close {position: absolute; top: 30px; left: 30px; width: 50px; height: 50px; border-radius: 50vh; background: #000 url('./../images/work/work_detail-close.png') no-repeat center; background-size: 100% auto;}
+#submenu .btn_close:focus, #submenu .btn_close:hover {background-color: #65d50c;}
+.device #submenu .btn_close:focus, .device #submenu .btn_close:hover {background-color: #000;}
+#submenu .btn_close-section {display: none;}
+
+#submenu > section {overflow-x: hidden; overflow-y: auto; display: none; position: absolute; right: 0; top: 0; width: 945px; max-width: 1680px !important; height: 100%; margin-right: -945px; padding-bottom: 425px; background: #101010; color: #fff;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-property: margin-right;
+	transition-property: margin-right;
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+#submenu > section .section_inner > div, #submenu > section .section_inner form > div {padding: 0 125px 0 140px;}
+#submenu > section .type > ul {overflow: hidden; width: 100%;}
+#submenu > section .type > ul li {float: left; display: table; width: 33.33%; height: 181px; border: 1px solid rgba(255, 255, 255, 0.05); border-width: 0 1px 1px 0;}
+#submenu > section .type > ul li:nth-child(3n) {border-right: none;}
+#submenu > section .type > ul li:nth-child(4), #submenu > section .type > ul li:nth-child(5), #submenu > section .type > ul li:nth-child(6) {border-bottom: none;}
+#submenu > section .type > ul li label {cursor: pointer; box-sizing: border-box; display: table-cell; width: 100%; height: 100%; padding: 72px 50px 0; font-family:"Helvetica Neue Md"; font-size: 15px; color: #828282; text-align: center; text-transform: uppercase; vertical-align: middle;}
+#submenu > section .type > ul li label:focus, #submenu > section .type > ul li label:hover {color: #d7d7d7;}
+#submenu > section .type > ul li:nth-child(1) label {background: url('./../images/sub/application.png') no-repeat center; background-size: 100% auto;}
+#submenu > section .type > ul li:nth-child(2) label {background: url('./../images/sub/web.png') no-repeat center; background-size: 100% auto;}
+#submenu > section .type > ul li:nth-child(3) label {background: url('./../images/sub/movie.png') no-repeat center; background-size: 100% auto;}
+#submenu > section .type > ul li:nth-child(4) label {background: url('./../images/sub/digital.png') no-repeat center; background-size: 100% auto;}
+#submenu > section .type > ul li:nth-child(5) label {background: url('./../images/sub/creative.png') no-repeat center; background-size: 100% auto;}
+#submenu > section .type > ul li:nth-child(6) label {background: url('./../images/sub/other.png') no-repeat center; background-size: 100% auto;}
+#submenu > section .type > ul li input:checked + label {background-color: #000;}
+#submenu > section .type > ul li:nth-child(1) input:checked + label, #submenu > section .type > ul li:nth-child(1) label:focus, #submenu > section .type > ul li:nth-child(1) label:hover {background-image: url('./../images/sub/application_h.png');}
+#submenu > section .type > ul li:nth-child(2) input:checked + label, #submenu > section .type > ul li:nth-child(2) label:focus, #submenu > section .type > ul li:nth-child(2) label:hover {background-image: url('./../images/sub/web_h.png');}
+#submenu > section .type > ul li:nth-child(3) input:checked + label, #submenu > section .type > ul li:nth-child(3) label:focus, #submenu > section .type > ul li:nth-child(3) label:hover {background-image: url('./../images/sub/movie_h.png');}
+#submenu > section .type > ul li:nth-child(4) input:checked + label, #submenu > section .type > ul li:nth-child(4) label:focus, #submenu > section .type > ul li:nth-child(4) label:hover {background-image: url('./../images/sub/digital_h.png');}
+#submenu > section .type > ul li:nth-child(5) input:checked + label, #submenu > section .type > ul li:nth-child(5) label:focus, #submenu > section .type > ul li:nth-child(5) label:hover {background-image: url('./../images/sub/creative_h.png');}
+#submenu > section .type > ul li:nth-child(6) input:checked + label, #submenu > section .type > ul li:nth-child(6) label:focus, #submenu > section .type > ul li:nth-child(6) label:hover {background-image: url('./../images/sub/other_h.png');}
+#submenu > section .label-attach {background-image: url('./../images/sub/attach.png'); background-repeat: no-repeat; background-position: right 16px center; background-size: auto 28.26%;}
+#submenu > section .accept_box {margin: 87px 0 37px; font-family: "Helvetica Neue Roman"; font-size: 15px; line-height: 17px; color: #9f9f9f;}
+#submenu > section .accept_box label {padding-left: 26px; background: url('./../images/sub/checkbox.png') no-repeat left center; background-size: auto 100%;}
+#submenu > section .accept_box label:focus, #submenu > section .accept_box label:hover {background-image: url('./../images/sub/checkbox_h.png');}
+#submenu > section .accept_box input:checked + label {background-image: url('./../images/sub/checkbox_on.jpg');}
+#submenu > section .accept_box button {display: inline-block; border-bottom: 1px solid #9f9f9f;}
+#submenu > section .accept_box label:focus button, #submenu > section .accept_box label:hover button {border-color: #72ff00; color: #72ff00;}
+#submenu > section .section_inner form > div.policy_contents {overflow: hidden; position: relative; height: 0; padding-top: 0; padding-bottom: 0; background: #000;}
+#submenu > section .section_inner form > div.policy_contents .contents_wrap {padding-top: 83px; padding-bottom: 37px;}
+#submenu > section .policy_contents .contents {margin-top: 36px;}
+#submenu > section .policy_contents .contents:first-of-type {margin-top: 0;}
+#submenu > section .policy_contents .contents:last-of-type {margin-top: 29px;}
+#submenu > section .policy_contents .contents-title {margin-top: 0; font-family: 'texgyreadventor_bold'; font-size: 20px; line-height: 26px; color: #fff; letter-spacing: -0.3px;}
+#submenu > section .policy_contents .contents-desc {margin-top: 10px; font-family: 'arial', sans-serif; font-size: 15px; line-height: 24px; color: #707070;}
+#submenu > section .policy_contents .contents:last-of-type .contents-desc {font-family: 'texgyreadventor_bold'; font-size: 15px; line-height: 38px; color: #707070; text-transform: uppercase;}
+#submenu > section .policy_contents ul {margin-top: 7px;}
+#submenu > section .policy_contents ul li {position: relative; margin-bottom: 16px; padding-left: 15px;}
+#submenu > section .policy_contents ul li:last-child {margin-bottom: 0;}
+#submenu > section .policy_contents ul li::before {content: ''; position: absolute; top: 9px; left: 0; width: 5px; height: 5px; border-radius: 50vh; background: #fff;}
+#submenu > section .section_inner form > div.submit_area {padding-top: 49px;}
+#submenu > section input[type="submit"] {cursor: pointer; width: 100%; height: 80px; border-radius: 50vh; background: #32b300; font-family:'texgyreadventor_bold'; font-size: 31px; color: #fff; text-transform: uppercase;}
+#submenu > section input[type="submit"]:focus, #submenu > section input[type="submit"]:hover {color: #000;}
+
+#submenu .apply {display: none;}
+
+#submenu .contact {display: none; width: calc(100% - 240px); padding-bottom: 0;}
+#submenu .contact .inner_wrap {direction: rtl;}}
+#submenu .contact .inner_wrap > div {height: 100%; direction: ltr;}
+#submenu > section.contact .section_inner > div {margin-top: 65px; padding: 0 51px 0 57px; direction: ltr;}
+#submenu > section.contact .section_inner > div:first-child {margin-top: 0;}
+#submenu .contact .contents .contents-title {margin-top: 0;}
+#submenu .contact #map {width: 100%; height: 100%; color: #000;}
+#submenu .mapboxgl-map button {padding: 1px 6px;}
+#submenu .contact .section_inner {width: 480px;}
+#submenu .contact .contact_info {font-family: "Helvetica Neue Roman"; font-size: 14px; line-height: 16px;}
+#submenu .contact .contact_info li {display: table;}
+#submenu .contact .contact_info li > p {display: table-cell;}
+#submenu .contact .contact_info .title {width: 95px; min-width: 60px;}
+#submenu .contact .contact_info .info {padding-bottom: 8px; padding-left: 20px; border-left: 1px solid rgba(255, 255, 255, 0.1); color: #808080;}
+#submenu .contact .contact_info li:last-child .info {padding-bottom: 0;}
+#submenu .contact .xtra_link {font-family: "Helvetica Neue Roman"; font-size: 14px; line-height: 16px; color: #808080;}
+#submenu .contact .xtra_link li {border-bottom: 1px solid rgba(255, 255, 255, 0.1);}
+#submenu .contact .xtra_link li:last-child {border-bottom: none;}
+#submenu .contact .xtra_link li a {display: block; width: 100%; padding: 17px 0 17px 59px; background-repeat: no-repeat; background-position: left center; background-size: auto 80%;}
+#submenu .contact .xtra_link li:nth-child(1) a {background-image: url('./../images/sub/pdf.png');}
+#submenu .contact .xtra_link li:nth-child(2) a {background-image: url('./../images/sub/facebook.png');}
+#submenu .contact .xtra_link li:nth-child(3) a {background-image: url('./../images/sub/youtube.png');}
+
+#submenu.show-inquiry .inquiry {display: block; margin-right: 0;}
+
+#submenu.show-apply .apply {display: block; margin-right: 0;}
+
+#submenu.show-contact .contact {display: block; margin-right: 0;}
+
+
+/*custom select*/
+.s-hidden {visibility:hidden; position: absolute; padding-right:10px;}
+.select {cursor:pointer; position:relative; font: inherit; color: inherit;}
+.styledSelect {padding: 9px 14px; border-radius: 50vh; background: #232323 url('./../images/sub/select_arrow.png') no-repeat right 16px center; background-size: auto 19.57%; font-family: "Helvetica Neue Roman"; font-size: 15px; line-height: 28px; color: #666;}
+.styledSelect:active, .styledSelect.active {background-image: url('./../images/sub/select_arrow_active.png'); color: #bfbfbf;}
+.styledSelect.active {border-radius: 23px 23px 0 0;}
+.options {display:none; position:absolute; top:100%; right:0; left:0; margin:0; padding: 0; background-color: #232323; font-family: "Helvetica Neue Roman"; font-size: 15px; line-height: 28px; color: #bfbfbf; z-index:999;}
+.styledSelect.active + .options {border-radius: 0 0 23px 23px; background-color: #1e1e1e; color: #fefefe;}
+.options li {margin: 0; padding: 9px 14px; border-top: 1px solid #131313;}
+.options li:last-child {border-radius: 0 0 23px 23px;}
+.options li:hover {background-color: #5ed126; color: #000;}
+
+
+
+#submenu > section {display:block}
+#submenu .apply {display:block}
+#submenu .contact {display:block;}
+
+
+
+@media screen and (max-width: 1218px){
+
+#submenu > section {width: calc(100% - 273px); margin-right: calc(-100% + 273px);}
+#submenu > section .section_inner > div, #submenu > section .section_inner form > div {padding: 0 10.55vw 0 11.81vw;}
+#submenu > section .type > ul li {height: 15.27vw;}
+#submenu > section .type > ul li label {padding: 6.08vw 0 0;}
+
+#submenu > section.contact .section_inner > div {padding: 0 4.3vw 0 4.81vw;}
+#submenu .contact .contact_info .title {width: 8.01vw;}
+#submenu .contact .contact_info .info {padding-left: 1.69vw;}
+
+.portrait #submenu > section {width: calc(100% - 355px); margin-right: calc(-100% + 355px);}
+
+}
+
+
+
+@media screen and (max-width: 980px){
+
+#submenu > section .type > ul li {width: 50%; height: 21.47vw;}
+#submenu > section .type > ul li label {padding: 9.35vw 0 0;}
+#submenu > section .type > ul li:nth-child(3n) {border-right: 1px solid rgba(255, 255, 255, 0.05);}
+#submenu > section .type > ul li:nth-child(2n) {border-right: none;}
+#submenu > section .type > ul li:nth-child(4) {border-bottom: 1px solid rgba(255, 255, 255, 0.05);}
+
+#submenu .contact .inner_wrap {display: block; direction: ltr; height: auto; min-height: 100%;}
+#submenu .contact .inner_wrap > div {display: block; width: 100%; height: auto;}
+#submenu > section.contact .section_inner {padding: 7.55vw 0 6.9vw;}
+#submenu > section.contact .section_inner > div {margin-top: 8.46vw; padding: 0 7.03vw;}
+#submenu > section.contact .section_inner > div.contact_info {padding: 0 8.2vw;}
+#submenu > section.contact .section_inner > div.xtra_link {margin-top: 16.28vw; padding: 0 7.8125vw;}
+#submenu .contact .contents .contents-title {margin-top: 0;}
+#submenu .contact #map {height: 130.99vw; max-height: 1006px; min-height: 50vh;}
+#submenu .contact .contact_info {font-size: 2.99vw; line-height: 3.91vw;}
+#submenu .contact .contact_info .title {width: 16.93vw; min-width: 70px;}
+#submenu .contact .contact_info .info {padding-bottom: 1.5625vw; padding-left: 4.82vw; border-left: 2px solid rgba(255, 255, 255, 0.1);}
+#submenu .contact .xtra_link {font-size: 2.99vw; line-height: 3.91vw;}
+#submenu .contact .xtra_link li {display: table; width: 100%; height: 11.46vw; border-bottom: 2px solid rgba(255, 255, 255, 0.1);}
+#submenu .contact .xtra_link li a {display: table-cell; padding: 0 0 0 13.54vw; vertical-align: middle;}
+#submenu > section .policy_contents .contents-title {margin-top: 0;}
+}
+
+
+
+/*@media screen and (orientation: portrait){
+
+.portrait #submenu .contents .contents-title {margin-top: 11.46vw; font-size: 9.9vw; line-height: 8.72vw; letter-spacing: -0.01em;}
+.portrait #submenu .contents .contents-desc {margin-top: 4.43vw; padding: 0 0.78vw; font-size: 2.99vw; line-height: 4.43vw;}
+.portrait #submenu .contents_sml .contents-title {margin: 9.24vw 0 3.26vw; font-size: 3.39vw; line-height: 3.78vw;}
+.portrait #submenu .contents_sml .contents-title .addtion {font-size: 1.95vw;}
+.portrait #submenu input, #submenu .input_look, #submenu textarea {padding: 0 2.47vw; border-radius: 2.99vw; font-size: 2.08vw; line-height: 3.65vw;}
+.portrait #submenu input:not(.hidden), #submenu .input_look {height: 5.86vw; line-height: 5.86vw;}
+.portrait #submenu textarea {height: 23.7vw; padding: 1.69vw 2.47vw;}
+.portrait #submenu .placeholder {padding: 1.17vw 2.47vw; font-size: 2.08vw; line-height: 3.65vw;}
+.portrait #submenu textarea + .placeholder {padding: 1.69vw 2.47vw;}
+.portrait #submenu .btn_close {top: 0; left: 0; width: 7.8125vw; height: 7.8125vw; }
+.portrait #submenu .btn_close-section {display: block; position: fixed; top: 1.3vw; left: 1.3vw; width: 7.8125vw; height: 7.8125vw; border-radius: 50vh; background: #000 url('./../images/work/work_detail-close.png') no-repeat center; background-size: 100% auto;}
+.portrait #submenu .btn_close-section:focus, #submenu .btn_close-section:hover {background-color: #65d50c;}
+.portrait .device #submenu .btn_close-section:focus, .portrait .device #submenu .btn_close-section:hover {background-color: #000;}
+
+.portrait #submenu > section {width: 100%; margin-right: -100%; padding-bottom: 9.11vw;}
+.portrait #submenu > section .section_inner > div {padding: 0 7.03vw;}
+.portrait #submenu > section .section_inner form > div {padding: 0 7.8125vw;}
+.portrait #submenu > section .type > ul li {width: 33.33%; height: 22.53vw;}
+.portrait #submenu > section .type > ul li:nth-child(2n) {border-right:  1px solid rgba(255, 255, 255, 0.05);}
+.portrait #submenu > section .type > ul li:nth-child(3n) {border-right: none;}
+.portrait #submenu > section .type > ul li:nth-child(4), #submenu > section .type > ul li:nth-child(5), #submenu > section .type > ul li:nth-child(6) {border-bottom: none;}
+.portrait #submenu > section .type > ul li label {padding: 9.24vw 6.51vw 0; font-size: 1.95vw;}
+.portrait #submenu > section .label-attach {background-position: right 2.08vw center; background-size: auto 28.26%;}
+.portrait #submenu > section .accept_box {margin: 10.81vw 0 4.56vw; font-size: 2.08vw; line-height: 2.21vw;}
+.portrait #submenu > section .accept_box label {padding-left: 3.39vw;}
+.portrait #submenu > section .section_inner form > div.policy_contents .contetns_wrap {padding-top: 10.81vw; padding-bottom: 4.82vw;}
+.portrait #submenu > section .policy_contents .contents {margin-top: 4.6875vw;}
+.portrait #submenu > section .policy_contents .contents:first-of-type {margin-top: 0;}
+.portrait #submenu > section .policy_contents .contents:last-of-type {margin-top: 3.78vw;}
+.portrait #submenu > section .policy_contents .contents-title {font-size: 2.6vw; line-height: 3.39vw;}
+.portrait #submenu > section .policy_contents .contents-desc {margin-top: 1.3vw; font-size: 2.08vw; line-height: 3.125vw;}
+.portrait #submenu > section .policy_contents .contents:last-of-type .contents-desc {font-size: 2.08vw; line-height: 4.95vw;}
+.portrait #submenu > section .policy_contents ul {margin-top: 0.91vw;}
+.portrait #submenu > section .policy_contents ul li {margin-bottom: 2.08vw; padding-left: 1.95vw;}
+.portrait #submenu > section .policy_contents ul li::before {top: 1.17vw; width: 0.65vw; height: 0.65vw;}
+.portrait #submenu > section .section_inner form > div.submit_area {padding-top: 6.12vw;}
+.portrait #submenu > section input[type="submit"] {height: 9.9vw; font-size: 3.91vw;}
+
+.portrait #submenu .contact .inner_wrap {display: block; direction: ltr; height: auto; min-height: 100%;}
+.portrait #submenu .contact .inner_wrap > div {display: block; width: 100%; height: auto;}
+.portrait #submenu > section.contact .section_inner {padding: 7.55vw 0 6.9vw;}
+.portrait #submenu > section.contact .section_inner > div {margin-top: 8.46vw; padding: 0 7.03vw;}
+.portrait #submenu > section.contact .section_inner > div.contact_info {padding: 0 8.2vw;}
+.portrait #submenu > section.contact .section_inner > div.xtra_link {margin-top: 16.28vw; padding: 0 7.8125vw;}
+.portrait #submenu .contact .contents .contents-title {margin-top: 0;}
+.portrait #submenu .contact #map {height: 130.99vw; max-height: 1006px; min-height: 50vh;}
+.portrait #submenu .contact .contact_info {font-size: 2.99vw; line-height: 3.91vw;}
+.portrait #submenu .contact .contact_info .title {width: 16.93vw; min-width: 7.8125vw;}
+.portrait #submenu .contact .contact_info .info {padding-bottom: 1.5625vw; padding-left: 4.82vw; border-left: 2px solid rgba(255, 255, 255, 0.1);}
+.portrait #submenu .contact .xtra_link {font-size: 2.99vw; line-height: 3.91vw;}
+.portrait #submenu .contact .xtra_link li {border-bottom: 2px solid rgba(255, 255, 255, 0.1);}
+.portrait #submenu .contact .xtra_link li a {padding: 3.65vw 0 3.65vw 13.54vw;}
+.portrait #submenu > section .policy_contents .contents-title {margin-top: 0;}*/
+
+/*custom select
+.portrait .s-hidden {padding-right: 1.3vw;}
+.portrait .styledSelect {padding: 1.17vw 2.47vw; font-size: 2.08vw; line-height: 3.65vw;}
+.portrait .styledSelect.active {border-radius: 2.99vw 2.99vw 0 0;}
+.portrait .options {font-size: 2.08vw; line-height: 3.65vw;}
+.portrait .styledSelect.active + .options {border-radius: 0 0 2.99vw 2.99vw;}
+.portrait .options li {padding: 1.17vw 2.47vw;}
+.portrait .options li:last-child {border-radius: 0 0 2.99vw 2.99vw;}
+
+}*/
+
+
+
+
+@media screen and (max-width: 768px){
+
+#submenu .contents .contents-title {margin-top: 11.46vw; font-size: 9.9vw; line-height: 8.72vw; letter-spacing: -0.01em;}
+#submenu .contents .contents-desc {margin-top: 4.43vw; padding: 0 0.78vw; font-size: 2.99vw; line-height: 4.43vw;}
+#submenu .contents_sml .contents-title {margin: 9.24vw 0 3.26vw; font-size: 3.39vw; line-height: 3.78vw;}
+#submenu .contents_sml .contents-title .addtion {font-size: 1.95vw;}
+#submenu input, #submenu .input_look, #submenu textarea {padding: 0 2.47vw; border-radius: 2.99vw; font-size: 2.08vw; line-height: 3.65vw;}
+#submenu input:not(.hidden), #submenu .input_look {height: 5.86vw; line-height: 5.86vw;}
+#submenu textarea {height: 23.7vw; padding: 1.69vw 2.47vw;}
+#submenu .placeholder {padding: 1.17vw 2.47vw; font-size: 2.08vw; line-height: 3.65vw;}
+#submenu textarea + .placeholder {padding: 1.69vw 2.47vw;}
+#submenu .btn_close {top: 0; left: 0; width: 7.8125vw; min-width: 46px; height: 7.8125vw; min-height: 46px;}
+#submenu .btn_close-section {display: block; position: fixed; top: 1.3vw; left: 1.3vw; width: 7.8125vw; min-width: 46px; height: 7.8125vw; min-height: 46px; border-radius: 50vh; background: #000 url('./../images/work/work_detail-close.png') no-repeat center; background-size: 100% auto;}
+#submenu .btn_close-section:focus, #submenu .btn_close-section:hover {background-color: #65d50c;}
+.device #submenu .btn_close-section:focus, .device #submenu .btn_close-section:hover {background-color: #000;}
+
+#submenu > section {width: 100%; margin-right: -100%; padding-bottom: 9.11vw;}
+#submenu > section .section_inner > div {padding: 0 7.03vw;}
+#submenu > section .section_inner form > div {padding: 0 7.8125vw;}
+#submenu > section .type > ul li {width: 33.33%; height: 22.53vw;}
+#submenu > section .type > ul li:nth-child(2n) {border-right:  1px solid rgba(255, 255, 255, 0.05);}
+#submenu > section .type > ul li:nth-child(3n) {border-right: none;}
+#submenu > section .type > ul li:nth-child(4), #submenu > section .type > ul li:nth-child(5), #submenu > section .type > ul li:nth-child(6) {border-bottom: none;}
+#submenu > section .type > ul li label {padding: 9.24vw 6.51vw 0; font-size: 1.95vw;}
+#submenu > section .label-attach {background-position: right 2.08vw center; background-size: auto 28.26%;}
+#submenu > section .accept_box {margin: 10.81vw 0 4.56vw; font-size: 2.08vw; line-height: 2.21vw;}
+#submenu > section .accept_box label {padding-left: 3.39vw;}
+#submenu > section .section_inner form > div.policy_contents .contetns_wrap {padding-top: 10.81vw; padding-bottom: 4.82vw;}
+#submenu > section .policy_contents .contents {margin-top: 4.6875vw;}
+#submenu > section .policy_contents .contents:first-of-type {margin-top: 0;}
+#submenu > section .policy_contents .contents:last-of-type {margin-top: 3.78vw;}
+#submenu > section .policy_contents .contents-title {font-size: 2.6vw; line-height: 3.39vw;}
+#submenu > section .policy_contents .contents-desc {margin-top: 1.3vw; font-size: 2.08vw; line-height: 3.125vw;}
+#submenu > section .policy_contents .contents:last-of-type .contents-desc {font-size: 2.08vw; line-height: 4.95vw;}
+#submenu > section .policy_contents ul {margin-top: 0.91vw;}
+#submenu > section .policy_contents ul li {margin-bottom: 2.08vw; padding-left: 1.95vw;}
+#submenu > section .policy_contents ul li::before {top: 1.17vw; width: 0.65vw; height: 0.65vw;}
+#submenu > section .section_inner form > div.submit_area {padding-top: 6.12vw;}
+#submenu > section input[type="submit"] {height: 9.9vw; font-size: 3.91vw;}
+
+.portrait #submenu > section {width: 100%; margin-right: -100%;}
+
+/*custom select*/
+.s-hidden {padding-right: 1.3vw;}
+.styledSelect {padding: 1.17vw 2.47vw; font-size: 2.08vw; line-height: 3.65vw;}
+.styledSelect.active {border-radius: 2.99vw 2.99vw 0 0;}
+.options {font-size: 2.08vw; line-height: 3.65vw;}
+.styledSelect.active + .options {border-radius: 0 0 2.99vw 2.99vw;}
+.options li {padding: 1.17vw 2.47vw;}
+.options li:last-child {border-radius: 0 0 2.99vw 2.99vw;}
+
+}
+
+
+
+
+@media screen and (max-width: 529px){
+
+#submenu .contents .contents-desc {font-size: 16px; line-height: 23px;}
+#submenu .contents_sml .contents-title {font-size: 18px; line-height: 20px;}
+#submenu .contents_sml .contents-title .addtion {font-size: 10px;}
+#submenu input, #submenu .input_look, #submenu textarea {padding: 0 13px; border-radius: 16px; font-size: 11px; line-height: 19px;}
+#submenu input:not(.hidden), #submenu .input_look {line-height: 31px;}
+#submenu input:not(.hidden), #submenu .input_look {height: 31px; line-height: 31px;}
+#submenu textarea {height: 125px; padding: 9px 13px;}
+#submenu .placeholder {padding: 6px 13px; font-size: 11px; line-height: 19px;}
+
+#submenu > section .type > ul li {width: 50%; height: 34.7vw;}
+#submenu > section .type > ul li:nth-child(3n) {border-right: 1px solid rgba(255, 255, 255, 0.05);}
+#submenu > section .type > ul li:nth-child(2n) {border-right: none;}
+#submenu > section .type > ul li:nth-child(4) {border-bottom: 1px solid rgba(255, 255, 255, 0.05);}
+#submenu > section .type > ul li label {padding: 16.2vw 5.1vw 0; font-size: 11px;}
+#submenu > section .accept_box {font-size: 11px; line-height: 12px;}
+#submenu > section .accept_box label {padding-left: 18px;}
+#submenu > section .policy_contents .contents-title {font-size: 14px; line-height: 18px;}
+#submenu > section .policy_contents .contents-desc {font-size: 11px; line-height: 17px;}
+#submenu > section .policy_contents .contents:last-of-type .contents-desc {font-size: 11px; line-height: 26px;}
+
+#submenu .contact .contact_info {font-size: 16px; line-height: 21px;}
+#submenu .contact .xtra_link {font-size: 16px; line-height: 21px;}
+
+/*custom select*/
+.s-hidden {padding-right: 7px;}
+.styledSelect {padding: 6px 13px; font-size: 11px; line-height: 19px;}
+.styledSelect.active {border-radius: 16px 16px 0 0;}
+.options {font-size: 11px; line-height: 19px;}
+.styledSelect.active + .options {border-radius: 0 0 16px 16px;}
+.options li {padding: 6px 6px;}
+.options li:last-child {border-radius: 0 0 16px 16px;}
+
+}
